@@ -11,9 +11,9 @@ export function GenderSelector() {
     return (
 
         <div className="flex space-x-4 mb-5">
-            <button className={`px-9 py-2 rounded-lg border ${gender === "Male" ? "border" : "border-gray-300"
+            <button className={`px-9 py-2 hover:cursor-pointer rounded-lg border ${gender === "Male" ? "border" : "border-gray-300"
                 }`} onClick={() => handleGenderChange("Male")} >Male</button>
-            <button className={`px-9 py-2 rounded-lg border ${gender === "Female" ? "border" : "border-gray-300"
+            <button className={`px-9 py-2 hover:cursor-pointer rounded-lg border ${gender === "Female" ? "border" : "border-gray-300"
                 }`} onClick={() => handleGenderChange("Female")}>Female</button>
         </div>
     )

@@ -74,6 +74,11 @@ function App() {
                 className="border border-gray-300 rounded-lg p-2 mb-4 w-full flex-3"
               />
             </div>
+            <button
+              className='w-full bg-red-400 text-white rounded-lg py-2 hover:cursor-pointer'
+            >
+              Calculate
+            </button>
           </div>
           <div className="bg-white rounded-lg p-4 shadow-md flex-1">
             <h3 className="font-bold">Your Results</h3>
