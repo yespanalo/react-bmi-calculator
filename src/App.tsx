@@ -7,6 +7,7 @@ function App() {
   const [age, setAge] = useState<number>(26);
   const [height, setHeight] = useState<number>(170);
   const [weight, setWeight] = useState<number>(70);
+  const [bmiScore, setBmiScore] = useState<number>(0);
 
   function handleAgeChange(newAge: number) {
     setAge(newAge);
@@ -76,12 +77,19 @@ function App() {
             </div>
             <button
               className='w-full bg-red-400 text-white rounded-lg py-2 hover:cursor-pointer'
+              onClick={() => {
+                const heightInMeters = height / 100;
+                const bmi = weight / (heightInMeters * heightInMeters);
+                setBmiScore(bmi);
+                console.log("BMI Score:", bmi);
+              }}
             >
               Calculate
             </button>
           </div>
           <div className="bg-white rounded-lg p-4 shadow-md flex-1">
             <h3 className="font-bold">Your Results</h3>
+            <h1>BMI SCORE {bmiScore}</h1>
           </div>
         </div>
       </div>
