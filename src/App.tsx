@@ -80,7 +80,7 @@ function App() {
               onClick={() => {
                 const heightInMeters = height / 100;
                 const bmi = weight / (heightInMeters * heightInMeters);
-                setBmiScore(bmi);
+                setBmiScore(Number(bmi.toFixed(2)));
                 console.log("BMI Score:", bmi);
               }}
             >
